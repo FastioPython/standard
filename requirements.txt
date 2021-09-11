@@ -1,0 +1,7 @@
+python-dotenv
+pytest
+uvicorn
+fastapi
+aiofiles
+mysqlclient
+orator
