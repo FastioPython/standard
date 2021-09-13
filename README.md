@@ -2,6 +2,8 @@
 
 Full-stack python web framework based on FastAPI
 
+![](https://github.com/FastioPython/standard/actions/workflows/test-python-app.yml/badge.svg?branch=main)
+
 ## Pre-requires
 
 - Python 3.7
