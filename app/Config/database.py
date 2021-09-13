@@ -1,5 +1,5 @@
 from pydantic import Field
-from .base import BaseConfig, APP_PATH, ENV_PATH
+from .base import BaseConfig
 
 
 class DatabaseConfig(BaseConfig):

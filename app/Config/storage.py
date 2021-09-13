@@ -5,7 +5,8 @@ from .base import BaseConfig, STORAGE_PATH
 class StorageConfig(BaseConfig):
 
     DEFAULT_DRIVER: str = Field('local', env='STORAGE_DRIVER')
-    
+    PATH: str = STORAGE_PATH
+
     STORAGE_DRIVERS = {
         'local': {
             'path': STORAGE_PATH,

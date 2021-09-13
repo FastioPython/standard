@@ -14,6 +14,7 @@ app.include_router(api_router_v1)
 # Register static files
 app.mount("/static", StaticFiles(directory="app/Storage/public"), name="static")
 
+
 # Register startup event
 @app.on_event("startup")
 def startup_event():

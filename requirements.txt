@@ -1,5 +1,7 @@
 python-dotenv
 pytest
+flake8
+requests
 uvicorn
 fastapi
 aiofiles

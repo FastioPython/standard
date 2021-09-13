@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, HTTPException
 
 router = APIRouter()
 
@@ -13,6 +13,7 @@ fake_items = [
     },
 ]
 
+
 @router.get("/")
 async def read_items():
     return fake_items
@@ -26,13 +27,11 @@ async def read_item(id: str):
     return None
 
 
-@router.put("/{item_id}", 
-    responses={403: {"description": "Operation forbidden"}},
-)
+@router.put("/{item_id}", responses={403: {"description": "Operation forbidden"}})
 async def update_item(item_id: str):
     if item_id != "1":
         raise HTTPException(
-            status_code=403, 
+            status_code=403,
             detail="You can only update the item: foo"
         )
     return {"item_id": item_id, "name": "The Fighters"}

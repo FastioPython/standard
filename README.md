@@ -53,6 +53,18 @@ Result
 It works!
 ```
 
+## Testing
+
+We use pytest and flake8 for lint python code convention.
+
+Run Lint with flake8
+
+```shell
+flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+```
+
+more about flake8 config here: https://flake8.pycqa.org/en/latest/user/configuration.html
+
 ## Documentation
 
 Full document to start development you can find at: [https://fastio.dev](https://fastio.dev)
