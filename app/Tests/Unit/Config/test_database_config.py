@@ -1,8 +1,6 @@
 import os
 import unittest
 from unittest import mock
-import dotenv
-from app.Config.base import APP_PATH
 from app.Config.database import DatabaseConfig
 
 fake_os_environ = {
@@ -13,6 +11,7 @@ fake_os_environ = {
     "DB_PASSWORD": "mypassword",
     "DB_DATABASE": "mydatabase",
 }
+
 
 # https://docs.python.org/3/library/unittest.mock.html#unittest.mock.patch.dict
 @mock.patch.dict(os.environ, fake_os_environ, clear=True)

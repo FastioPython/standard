@@ -1,11 +1,10 @@
-import secrets
 from pydantic import Field
-from .base import BaseConfig, APP_PATH, ENV_PATH
+from .base import BaseConfig, APP_PATH
 
 
 class AppConfig(BaseConfig):
 
-    APP_PATH: str = APP_PATH
+    PATH: str = APP_PATH
     APP_NAME: str = Field('Fastio', env='APP_NAME')
     APP_ENV: str = Field(..., env='APP_ENV')
     APP_KEY: str = Field(..., env='APP_KEY')
